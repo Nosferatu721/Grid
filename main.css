@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@400;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lemonada', sans-serif;
+}
+.container {
+  display: grid;
+  height: 100vh;
+  /* grid-template-columns: 25% 50% 25%; */
+  /* grid-template-rows: 50px 100px 75px; */
+  /* grid-template: Filas / Columnas; */
+  grid-template: 1fr 2fr 1fr / 1fr 3fr;
+  grid-template-areas:  "header header"
+                        "left contenido"
+                        "footer footer";
+}
+.item {
+  background: #333333;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+}
+.header {
+  grid-area: header;
+}
+.footer {
+  grid-area: footer;
+}
