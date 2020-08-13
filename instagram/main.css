@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Public Sans", sans-serif;
+}
+
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 300px));
+  justify-content: center;
+}
+
+.post {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  margin: 10px;
+}
+.post-image img {
+  width: 100%;
+  vertical-align: top;
+}
+.post-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.post:hover .post-overlay {
+  display: flex;
+}
+
+.post-likes,
+.post-comments {
+  /* El Span esta en display inline y no deja colocar width */
+  display: inline-block;
+  width: auto;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: 0 0 5px rgb(66, 66, 66);
+}
+
+@media screen and (max-width: 500px) {
+  .post-list{
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(26, 26, 26);
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 50%;
+  height: 400px;
+  background: hsl(229, 57%, 11%);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.img-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.Box1,
+.Box2 {
+  border: 1px solid white;
+  z-index: 5;
+  margin: 0 20px;
+}
+
+.Box1 {
+  width: 20%;
+}
+
+.Box2 {
+  width: 40%;
+}
